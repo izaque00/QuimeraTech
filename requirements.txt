@@ -1,0 +1,50 @@
+# Quimera MarkX — Dependencies
+# Core
+numpy>=1.24,<2
+scipy>=1.10
+pydantic>=2.0
+pyyaml>=6.0
+
+# GA Engine (NSGA-II)
+deap>=1.4
+
+# Static Analysis
+# bandit>=1.7  # Optional: Python security linter
+# semgrep>=1.0  # Optional: multi-language SAST
+
+# HTTP & API
+fastapi>=0.100
+uvicorn[standard]>=0.23
+httpx>=0.25
+aiohttp>=3.9
+
+# CLI
+rich>=13.0
+click>=8.1
+typer>=0.9
+
+# Testing
+pytest>=7.4
+pytest-asyncio>=0.21
+pytest-cov>=4.1
+pytest-benchmark>=4.0
+
+# Observability
+# prometheus-client>=0.19
+# opentelemetry-api>=1.20
+# opentelemetry-sdk>=1.20
+
+# LLM (optional, for cognition layer)
+# ollama>=0.1
+# langchain>=0.1
+# langchain-community>=0.1
+
+# Database (for Engineering KB)
+# sqlalchemy>=2.0
+# alembic>=1.12
+
+# Development
+black>=23.0
+ruff>=0.1
+mypy>=1.7
+ipython>=8.0

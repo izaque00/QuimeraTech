@@ -1,0 +1,62 @@
+# Quimera Mark X v2.2.1 — Sandbox Container
+# Isolated execution environment for fuzzing, exploits, and code verification
+
+FROM python:3.11-slim-bookworm
+
+LABEL org.opencontainers.image.title="Quimera Mark X Sandbox"
+LABEL org.opencontainers.image.version="2.2.1"
+LABEL org.opencontainers.image.description="Isolated sandbox for Quimera fuzzing and exploit verification"
+
+# System dependencies (compiler toolchain + sanitizers)
+RUN apt-get update -qq && \
+    apt-get install -y -qq --no-install-recommends \
+        gcc \
+        g++ \
+        gdb \
+        make \
+        cmake \
+        git \
+        libc6-dev \
+        libasan6 \
+        libubsan1 \
+        strace \
+        ltrace \
+        valgrind \
+        && rm -rf /var/lib/apt/lists/*
+
+# Create sandbox user
+RUN useradd --create-home --shell /bin/bash sandbox && \
+    mkdir -p /sandbox/workspace /sandbox/output /sandbox/tmp && \
+    chown -R sandbox:sandbox /sandbox
+
+WORKDIR /sandbox
+
+# Copy application code (read-only for sandbox)
+COPY --chown=sandbox:sandbox quimera/ /sandbox/quimera/
+COPY --chown=sandbox:sandbox requirements_minimal.txt /sandbox/
+
+# Install Python deps
+RUN pip install --no-cache-dir -r requirements_minimal.txt 2>/dev/null || \
+    pip install --no-cache-dir pycparser
+
+# Install optional security tools
+RUN pip install --no-cache-dir z3-solver 2>/dev/null || echo "Z3 skipped"
+
+# Environment
+ENV PYTHONPATH=/sandbox
+ENV PYTHONUNBUFFERED=1
+ENV QUIMERA_SANDBOX_MODE=true
+ENV ASAN_OPTIONS=detect_leaks=1:detect_stack_use_after_return=1
+ENV UBSAN_OPTIONS=print_stacktrace=1
+
+# Drop privileges
+USER sandbox
+
+# Default: run fuzzing worker
+CMD ["python", "-c", "\
+from quimera.integration_backends.fuzzing_engine import FuzzingEngine; \
+from quimera.integration_backends.red_team import RedTeam; \
+print('Quimera Sandbox v2.2.1 ready'); \
+print(f'Red Team: {RedTeam(aggressiveness=0.5).get_stats()}'); \
+print(f'Fuzzing: ready with ASan + UBSan') \
+"]

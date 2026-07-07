@@ -1,0 +1,42 @@
+# Dockerfile.api
+# Imagem Docker para API + Worker do Quimera
+
+FROM python:3.11-slim
+
+WORKDIR /app
+
+# Dependências do sistema
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    gcc \
+    build-essential \
+    git \
+    && rm -rf /var/lib/apt/lists/*
+
+# Dependências Python — instalar via pyproject.toml
+COPY pyproject.toml .
+COPY requirements_minimal.txt .
+RUN pip install --no-cache-dir -r requirements_minimal.txt
+RUN pip install --no-cache-dir fastapi uvicorn[standard] pydantic redis[hiredis] httpx
+
+# Código completo (necessário para imports internos)
+COPY quimera/ quimera/
+COPY manifesto_quimera.json .
+
+# Setup.py para compatibilidade
+COPY setup.py .
+
+# Instalar Quimera como pacote
+RUN pip install -e . 2>/dev/null || true
+
+# Diretório de dados
+RUN mkdir -p /app/data
+
+# PYTHONPATH para imports absolutos
+ENV PYTHONPATH=/app
+
+EXPOSE 8000
+
+HEALTHCHECK --interval=10s --timeout=3s \
+    CMD python -c "import urllib.request; urllib.request.urlopen('http://localhost:8000/api/v1/health')" || exit 1
+
+CMD ["python", "-m", "quimera.api.run", "all"]

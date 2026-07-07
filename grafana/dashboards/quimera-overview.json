@@ -1,0 +1,51 @@
+{
+  "title": "Quimera Pipeline Overview",
+  "uid": "quimera-overview",
+  "panels": [
+    {
+      "title": "Missions per Minute",
+      "type": "graph",
+      "targets": [
+        {"expr": "rate(quimera_missions_total[5m])", "legendFormat": "{{status}}"}
+      ]
+    },
+    {
+      "title": "Pipeline Duration (seconds)",
+      "type": "heatmap",
+      "targets": [
+        {"expr": "rate(quimera_pipeline_duration_seconds_bucket[5m])"}
+      ]
+    },
+    {
+      "title": "LLM API Latency",
+      "type": "graph",
+      "targets": [
+        {"expr": "rate(quimera_llm_latency_seconds_bucket[5m])", "legendFormat": "le={{le}}"}
+      ]
+    },
+    {
+      "title": "Active Pipelines",
+      "type": "stat",
+      "targets": [
+        {"expr": "quimera_pipeline_active"}
+      ]
+    },
+    {
+      "title": "Patches Generated",
+      "type": "stat",
+      "targets": [
+        {"expr": "rate(quimera_patches_generated[1h])", "legendFormat": "{{language}}"}
+      ]
+    },
+    {
+      "title": "API Uptime",
+      "type": "stat",
+      "targets": [
+        {"expr": "quimera_api_uptime_seconds"}
+      ],
+      "fieldConfig": {
+        "defaults": {"unit": "s"}
+      }
+    }
+  ]
+}

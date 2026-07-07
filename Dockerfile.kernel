@@ -1,0 +1,51 @@
+# Quimera Kernel Sandbox — Docker image for building/testing kernel modules
+# Usage: docker build -t quimera-kernel -f Dockerfile.kernel .
+#        docker run --rm -v $(pwd):/workspace quimera-kernel
+
+FROM ubuntu:22.04
+
+ENV DEBIAN_FRONTEND=noninteractive
+
+# Kernel build tools
+RUN apt-get update && apt-get install -y \
+    build-essential \
+    linux-headers-generic \
+    gcc \
+    make \
+    libelf-dev \
+    libssl-dev \
+    flex \
+    bison \
+    bc \
+    kmod \
+    && rm -rf /var/lib/apt/lists/*
+
+# Python + Quimera
+RUN apt-get update && apt-get install -y \
+    python3 python3-pip \
+    && rm -rf /var/lib/apt/lists/*
+
+RUN pip3 install aiohttp setuptools
+
+# ASan/UBSan runtime
+RUN apt-get update && apt-get install -y \
+    libasan6 libubsan1 \
+    && rm -rf /var/lib/apt/lists/*
+
+# Quimera itself
+COPY quimera/ /opt/quimera/quimera/
+COPY pyproject.toml /opt/quimera/
+COPY setup.py /opt/quimera/
+COPY requirements_minimal.txt /opt/quimera/
+WORKDIR /opt/quimera
+RUN pip3 install -r requirements_minimal.txt 2>/dev/null || true
+RUN pip3 install -e . 2>/dev/null || true
+
+# Kernel headers link
+RUN ln -sf /usr/src/linux-headers-$(uname -r) /lib/modules/$(uname -r)/build 2>/dev/null || true
+
+ENV PYTHONPATH=/opt/quimera
+
+WORKDIR /workspace
+
+ENTRYPOINT ["python3", "-c", "from quimera.engineer import QuimeraEngineer; import asyncio; eng = QuimeraEngineer('.'); asyncio.run(eng.solve('Fix all build errors and make this driver work', max_iterations=10))"]

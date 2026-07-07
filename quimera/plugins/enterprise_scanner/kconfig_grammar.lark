@@ -1,0 +1,41 @@
+// Kconfig Grammar for Quimera Enterprise Scanner
+// Used by advanced_kconfig_parser.py for Linux kernel Kconfig parsing
+
+start: statement*
+
+statement: config_entry | menuconfig_entry | source_stmt | menu_stmt | comment_stmt | choice_stmt | if_stmt | EMPTY_LINE
+
+config_entry: "config" SYMBOL NEWLINE config_property*
+menuconfig_entry: "menuconfig" SYMBOL NEWLINE config_property*
+
+config_property: bool_prop | tristate_prop | string_prop | int_prop | hex_prop | def_bool_prop | def_tristate_prop | prompt_prop | default_prop | depends_on_prop | select_prop | help_prop | range_prop
+
+bool_prop: "bool" STRING? NEWLINE
+tristate_prop: "tristate" STRING? NEWLINE
+string_prop: "string" STRING? NEWLINE
+int_prop: "int" STRING? NEWLINE
+hex_prop: "hex" STRING? NEWLINE
+def_bool_prop: "def_bool" EXPRESSION NEWLINE
+def_tristate_prop: "def_tristate" EXPRESSION NEWLINE
+prompt_prop: "prompt" STRING NEWLINE
+default_prop: "default" EXPRESSION ("if" EXPRESSION)? NEWLINE
+depends_on_prop: "depends" "on" EXPRESSION NEWLINE
+select_prop: "select" SYMBOL ("if" EXPRESSION)? NEWLINE
+help_prop: "help" NEWLINE HELP_TEXT
+range_prop: "range" EXPRESSION EXPRESSION ("if" EXPRESSION)? NEWLINE
+
+source_stmt: "source" STRING NEWLINE
+menu_stmt: "menu" STRING NEWLINE statement* "endmenu" NEWLINE
+comment_stmt: "comment" STRING NEWLINE depends_on_prop?
+choice_stmt: "choice" NEWLINE config_property* config_entry* "endchoice" NEWLINE
+if_stmt: "if" EXPRESSION NEWLINE statement* "endif" NEWLINE
+
+EXPRESSION: /[^\n]+/
+SYMBOL: /[A-Z_][A-Z0-9_]+/
+STRING: /"[^"]*"/
+HELP_TEXT: /(\s{2,}[^\n]*\n)+/
+NEWLINE: /\n/
+EMPTY_LINE: /[ \t]*\n/
+
+%ignore /#[^\n]*/
+%ignore /[ \t]+/

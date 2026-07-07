@@ -1,0 +1,156 @@
+{
+  "models": {
+    "gpt-oss-120b:free": {
+      "provider": "openrouter",
+      "endpoint": "https://openrouter.ai/api/v1/chat/completions",
+      "max_context": 131072,
+      "free": true,
+      "capabilities": {
+        "code_generation": 85,
+        "debugging": 82,
+        "reasoning": 88,
+        "planning": 80,
+        "creative": 75,
+        "vision": 0,
+        "long_context": 70,
+        "speed_ms": 5000
+      }
+    },
+    "mistral-small-latest": {
+      "provider": "mistral",
+      "endpoint": "https://api.mistral.ai/v1/chat/completions",
+      "max_context": 32768,
+      "free": false,
+      "capabilities": {
+        "code_generation": 88,
+        "debugging": 85,
+        "reasoning": 82,
+        "planning": 78,
+        "creative": 80,
+        "vision": 0,
+        "long_context": 50,
+        "speed_ms": 3000
+      }
+    },
+    "claude-sonnet-4-20250514": {
+      "provider": "anthropic",
+      "endpoint": "https://api.anthropic.com/v1/messages",
+      "max_context": 200000,
+      "free": false,
+      "capabilities": {
+        "code_generation": 92,
+        "debugging": 90,
+        "reasoning": 93,
+        "planning": 91,
+        "creative": 88,
+        "vision": 85,
+        "long_context": 95,
+        "speed_ms": 8000
+      }
+    },
+    "llama-3.1-8b-instant": {
+      "provider": "groq",
+      "endpoint": "https://api.groq.com/openai/v1/chat/completions",
+      "max_context": 8192,
+      "free": true,
+      "capabilities": {
+        "code_generation": 72,
+        "debugging": 68,
+        "reasoning": 70,
+        "planning": 65,
+        "creative": 60,
+        "vision": 0,
+        "long_context": 30,
+        "speed_ms": 800
+      }
+    },
+    "llama-3.3-70b-instruct-turbo-free": {
+      "provider": "together",
+      "endpoint": "https://api.together.xyz/v1/chat/completions",
+      "max_context": 131072,
+      "free": true,
+      "capabilities": {
+        "code_generation": 90,
+        "debugging": 88,
+        "reasoning": 92,
+        "planning": 85,
+        "creative": 75,
+        "vision": 0,
+        "long_context": 80,
+        "speed_ms": 4000
+      }
+    },
+    "gemini-2.0-flash": {
+      "provider": "google",
+      "endpoint": "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent",
+      "max_context": 1048576,
+      "free": true,
+      "capabilities": {
+        "code_generation": 86,
+        "debugging": 84,
+        "reasoning": 85,
+        "planning": 82,
+        "creative": 82,
+        "vision": 75,
+        "long_context": 98,
+        "speed_ms": 2000
+      }
+    }
+  },
+  "providers": {
+    "openrouter": {
+      "name": "OpenRouter",
+      "api_key_env": "OPENROUTER_API_KEY",
+      "base_url": "https://openrouter.ai/api/v1/chat/completions",
+      "auth_header": "Authorization",
+      "auth_prefix": "Bearer",
+      "extra_headers": {
+        "HTTP-Referer": "https://github.com/izaque/quimera",
+        "X-Title": "Quimera"
+      }
+    },
+    "mistral": {
+      "name": "Mistral AI",
+      "api_key_env": "MISTRAL_API_KEY",
+      "base_url": "https://api.mistral.ai/v1/chat/completions",
+      "auth_header": "Authorization",
+      "auth_prefix": "Bearer"
+    },
+    "anthropic": {
+      "name": "Anthropic",
+      "api_key_env": "ANTHROPIC_API_KEY",
+      "base_url": "https://api.anthropic.com/v1/messages",
+      "auth_header": "x-api-key",
+      "response_format": "anthropic"
+    },
+    "groq": {
+      "name": "Groq",
+      "api_key_env": "GROQ_API_KEY",
+      "base_url": "https://api.groq.com/openai/v1/chat/completions",
+      "auth_header": "Authorization",
+      "auth_prefix": "Bearer"
+    },
+    "together": {
+      "name": "Together AI",
+      "api_key_env": "TOGETHER_API_KEY",
+      "base_url": "https://api.together.xyz/v1/chat/completions",
+      "auth_header": "Authorization",
+      "auth_prefix": "Bearer"
+    },
+    "google": {
+      "name": "Google AI",
+      "api_key_env": "GOOGLE_API_KEY",
+      "base_url": "https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent",
+      "auth_type": "query_param"
+    }
+  },
+  "defaults": {
+    "provider": "openrouter",
+    "model": "gpt-oss-120b:free",
+    "fallback_providers": ["mistral", "together", "groq", "google"],
+    "max_retries": 3,
+    "temperature": 0.3,
+    "max_tokens": 8000,
+    "prefer_free": true
+  }
+}

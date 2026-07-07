@@ -1,0 +1,65 @@
+{
+  "patch_memory": {
+    "source": "patch_memory",
+    "times_queried": 1,
+    "times_useful": 1,
+    "patches_from_this_source": 3,
+    "patches_accepted": 3,
+    "avg_confidence_when_useful": 0.92,
+    "last_useful": "2026-07-02 03:38"
+  },
+  "engineering_kb": {
+    "source": "engineering_kb",
+    "times_queried": 1,
+    "times_useful": 1,
+    "patches_from_this_source": 2,
+    "patches_accepted": 2,
+    "avg_confidence_when_useful": 0.78,
+    "last_useful": "2026-07-02 03:38"
+  },
+  "github_commits": {
+    "source": "github_commits",
+    "times_queried": 1,
+    "times_useful": 1,
+    "patches_from_this_source": 5,
+    "patches_accepted": 4,
+    "avg_confidence_when_useful": 0.72,
+    "last_useful": "2026-07-02 03:38"
+  },
+  "man_pages": {
+    "source": "man_pages",
+    "times_queried": 2,
+    "times_useful": 2,
+    "patches_from_this_source": 1,
+    "patches_accepted": 0,
+    "avg_confidence_when_useful": 0.515,
+    "last_useful": "2026-07-02 04:22"
+  },
+  "stackoverflow": {
+    "source": "stackoverflow",
+    "times_queried": 2,
+    "times_useful": 1,
+    "patches_from_this_source": 1,
+    "patches_accepted": 1,
+    "avg_confidence_when_useful": 0.55,
+    "last_useful": "2026-07-02 03:38"
+  },
+  "cve_database": {
+    "source": "cve_database",
+    "times_queried": 1,
+    "times_useful": 0,
+    "patches_from_this_source": 0,
+    "patches_accepted": 0,
+    "avg_confidence_when_useful": 0.0,
+    "last_useful": ""
+  },
+  "llm": {
+    "source": "llm",
+    "times_queried": 2,
+    "times_useful": 1,
+    "patches_from_this_source": 2,
+    "patches_accepted": 1,
+    "avg_confidence_when_useful": 0.4,
+    "last_useful": "2026-07-02 03:38"
+  }
+}

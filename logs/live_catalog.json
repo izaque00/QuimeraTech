@@ -1,0 +1,87 @@
+{
+  "gpt-oss-120b:free": {
+    "model": "gpt-oss-120b:free",
+    "provider": "openrouter",
+    "total_attempts": 9,
+    "successes": 8,
+    "failures": 1,
+    "avg_time_ms": 2710.887235555392,
+    "total_tokens": 6500,
+    "cwe_stats": {
+      "CWE-416": {
+        "success": 8,
+        "total": 8,
+        "avg_time_ms": 2528.602972555392
+      },
+      "CWE-476": {
+        "success": 0,
+        "total": 1,
+        "avg_time_ms": 8000
+      }
+    },
+    "project_stats": {
+      "make": {
+        "success": 7,
+        "total": 7
+      },
+      "cmake": {
+        "success": 1,
+        "total": 1
+      },
+      "kernel": {
+        "success": 0,
+        "total": 1
+      }
+    },
+    "last_used": "2026-07-02 03:24",
+    "first_used": "2026-07-02"
+  },
+  "mistral-small-latest": {
+    "model": "mistral-small-latest",
+    "provider": "mistral",
+    "total_attempts": 1,
+    "successes": 1,
+    "failures": 0,
+    "avg_time_ms": 3000,
+    "total_tokens": 800,
+    "cwe_stats": {
+      "CWE-416": {
+        "success": 1,
+        "total": 1,
+        "avg_time_ms": 3000
+      }
+    },
+    "project_stats": {
+      "make": {
+        "success": 1,
+        "total": 1
+      }
+    },
+    "last_used": "2026-07-02 03:24",
+    "first_used": "2026-07-02"
+  },
+  "unknown": {
+    "model": "unknown",
+    "provider": "unknown",
+    "total_attempts": 8,
+    "successes": 0,
+    "failures": 8,
+    "avg_time_ms": 13.802749154257972,
+    "total_tokens": 0,
+    "cwe_stats": {
+      "CWE-416": {
+        "success": 0,
+        "total": 8,
+        "avg_time_ms": 13.802749154257972
+      }
+    },
+    "project_stats": {
+      "c": {
+        "success": 0,
+        "total": 8
+      }
+    },
+    "last_used": "2026-07-02 04:22",
+    "first_used": "2026-07-02"
+  }
+}

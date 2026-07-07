@@ -1,0 +1,1218 @@
+{
+  "CONFIG_SYSTEM_VIPC": {
+    "original": "CONFIG_SYSTEM_VIPC",
+    "target": "CONFIG_SYSVIPC",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_NET_FILTERING": {
+    "original": "CONFIG_NET_FILTERING",
+    "target": "CONFIG_NETFILTER",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_USB_MASS_STOR": {
+    "original": "CONFIG_USB_MASS_STOR",
+    "target": "CONFIG_USB_STORAGE",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_INTEL_GRAPHICS": {
+    "original": "CONFIG_INTEL_GRAPHICS",
+    "target": "CONFIG_DRM_I915",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_AUDIO_CORE": {
+    "original": "CONFIG_AUDIO_CORE",
+    "target": "CONFIG_SOUND_CORE",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_EXT4_FILESYSTEM": {
+    "original": "CONFIG_EXT4_FILESYSTEM",
+    "target": "CONFIG_EXT4_FS",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_SECURITY_SUBSYSTEM": {
+    "original": "CONFIG_SECURITY_SUBSYSTEM",
+    "target": "CONFIG_SECURITY_FRAMEWORK",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_BLUETOOTH_SUPPORT": {
+    "original": "CONFIG_BLUETOOTH_SUPPORT",
+    "target": "CONFIG_BLUETOOTH",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_WIRELESS_NET": {
+    "original": "CONFIG_WIRELESS_NET",
+    "target": "CONFIG_WIRELESS",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_CRYPTO_ALGORITHMS": {
+    "original": "CONFIG_CRYPTO_ALGORITHMS",
+    "target": "CONFIG_CRYPTO",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_CUSTOM_NETWORK": {
+    "original": "CONFIG_CUSTOM_NETWORK",
+    "target": "CONFIG_NETFILTER",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "variations": {
+    "original": "variations",
+    "target": {
+      "CONFIG_NET_PKT_SCHED": "CONFIG_NET_SCHED",
+      "CONFIG_NET_PKT_CLS": "CONFIG_NET_CLS",
+      "CONFIG_SND_HDA": "CONFIG_SND_HDA_INTEL",
+      "CONFIG_DRM_RADEON": "CONFIG_DRM_RADEON_KMS",
+      "CONFIG_FB_VESAFB": "CONFIG_FB_VESA",
+      "CONFIG_USB_HID": "CONFIG_HID_USB",
+      "CONFIG_BT_CORE": "CONFIG_BT",
+      "CONFIG_WLAN": "CONFIG_WIRELESS",
+      "CONFIG_CRYPTO_SHA1": "CONFIG_CRYPTO_SHA1_GENERIC",
+      "CONFIG_CRYPTO_AES": "CONFIG_CRYPTO_AES_GENERIC",
+      "CONFIG_SECURITY_SELINUX": "CONFIG_SECURITY_SELINUX_BOOTPARAM",
+      "CONFIG_CGROUP": "CONFIG_CGROUPS",
+      "CONFIG_NAMESPACE": "CONFIG_NAMESPACES",
+      "CONFIG_SYSFS": "CONFIG_SYSFS_DEPRECATED",
+      "CONFIG_PROC": "CONFIG_PROC_FS"
+    },
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "description": {
+    "original": "description",
+    "target": "Varia\u00e7\u00f5es de m\u00f3dulos coletadas de diferentes distribui\u00e7\u00f5es Linux",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "source": {
+    "original": "source",
+    "target": "An\u00e1lise de kernels Ubuntu, Debian, CentOS, Arch Linux",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "confidence_level": {
+    "original": "confidence_level",
+    "target": 0.9,
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "verified_by": {
+    "original": "verified_by",
+    "target": "An\u00e1lise autom\u00e1tica + valida\u00e7\u00e3o manual",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_NET_PKT_SCHED": {
+    "original": "CONFIG_NET_PKT_SCHED",
+    "target": "CONFIG_NET_SCHED",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_NET_PKT_CLS": {
+    "original": "CONFIG_NET_PKT_CLS",
+    "target": "CONFIG_NET_CLS",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_SND_HDA": {
+    "original": "CONFIG_SND_HDA",
+    "target": "CONFIG_SND_HDA_INTEL",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_DRM_RADEON": {
+    "original": "CONFIG_DRM_RADEON",
+    "target": "CONFIG_DRM_RADEON_KMS",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_FB_VESAFB": {
+    "original": "CONFIG_FB_VESAFB",
+    "target": "CONFIG_FB_VESA",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_USB_HID": {
+    "original": "CONFIG_USB_HID",
+    "target": "CONFIG_HID_USB",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_BT_CORE": {
+    "original": "CONFIG_BT_CORE",
+    "target": "CONFIG_BT",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_WLAN": {
+    "original": "CONFIG_WLAN",
+    "target": "CONFIG_WIRELESS",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_CRYPTO_SHA1": {
+    "original": "CONFIG_CRYPTO_SHA1",
+    "target": "CONFIG_CRYPTO_SHA1_GENERIC",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_CRYPTO_AES": {
+    "original": "CONFIG_CRYPTO_AES",
+    "target": "CONFIG_CRYPTO_AES_GENERIC",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_SECURITY_SELINUX": {
+    "original": "CONFIG_SECURITY_SELINUX",
+    "target": "CONFIG_SECURITY_SELINUX_BOOTPARAM",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_CGROUP": {
+    "original": "CONFIG_CGROUP",
+    "target": "CONFIG_CGROUPS",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_NAMESPACE": {
+    "original": "CONFIG_NAMESPACE",
+    "target": "CONFIG_NAMESPACES",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_SYSFS": {
+    "original": "CONFIG_SYSFS",
+    "target": "CONFIG_SYSFS_DEPRECATED",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_PROC": {
+    "original": "CONFIG_PROC",
+    "target": "CONFIG_PROC_FS",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "_comment": {
+    "original": "_comment",
+    "target": "Varia\u00e7\u00f5es Reais de M\u00f3dulos do Kernel Linux - Coletadas de Ubuntu, Debian, CentOS, Arch",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_SYS_VIPC": {
+    "original": "CONFIG_SYS_VIPC",
+    "target": "CONFIG_SYSVIPC",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_SYS_V_IPC": {
+    "original": "CONFIG_SYS_V_IPC",
+    "target": "CONFIG_SYSVIPC",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_NETWORK_FILTER": {
+    "original": "CONFIG_NETWORK_FILTER",
+    "target": "CONFIG_NETFILTER",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_PKT_FILTER": {
+    "original": "CONFIG_PKT_FILTER",
+    "target": "CONFIG_NETFILTER",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_USB_MASS_STORAGE_DRIVER": {
+    "original": "CONFIG_USB_MASS_STORAGE_DRIVER",
+    "target": "CONFIG_USB_STORAGE",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_SCSI_USB": {
+    "original": "CONFIG_SCSI_USB",
+    "target": "CONFIG_USB_STORAGE",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_INTEL_GFX": {
+    "original": "CONFIG_INTEL_GFX",
+    "target": "CONFIG_DRM_I915",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_I915_DRIVER": {
+    "original": "CONFIG_I915_DRIVER",
+    "target": "CONFIG_DRM_I915",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_INTEL_GPU": {
+    "original": "CONFIG_INTEL_GPU",
+    "target": "CONFIG_DRM_I915",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_SOUND": {
+    "original": "CONFIG_SOUND",
+    "target": "CONFIG_SOUND_CORE",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_AUDIO": {
+    "original": "CONFIG_AUDIO",
+    "target": "CONFIG_SOUND_CORE",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_SND": {
+    "original": "CONFIG_SND",
+    "target": "CONFIG_SOUND_CORE",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_EXT4": {
+    "original": "CONFIG_EXT4",
+    "target": "CONFIG_EXT4_FS",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_EXT4_SUPPORT": {
+    "original": "CONFIG_EXT4_SUPPORT",
+    "target": "CONFIG_EXT4_FS",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_BT": {
+    "original": "CONFIG_BT",
+    "target": "CONFIG_BLUETOOTH",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_WIFI": {
+    "original": "CONFIG_WIFI",
+    "target": "CONFIG_WIRELESS",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_802_11": {
+    "original": "CONFIG_802_11",
+    "target": "CONFIG_WIRELESS",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_SECURITY": {
+    "original": "CONFIG_SECURITY",
+    "target": "CONFIG_SECURITY_FRAMEWORK",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_SEC_FRAMEWORK": {
+    "original": "CONFIG_SEC_FRAMEWORK",
+    "target": "CONFIG_SECURITY_FRAMEWORK",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_KERNEL_SECURITY": {
+    "original": "CONFIG_KERNEL_SECURITY",
+    "target": "CONFIG_SECURITY_FRAMEWORK",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_PACKET_SOCKET": {
+    "original": "CONFIG_PACKET_SOCKET",
+    "target": "CONFIG_PACKET",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_RAW_SOCKET": {
+    "original": "CONFIG_RAW_SOCKET",
+    "target": "CONFIG_PACKET",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_PKT_SOCKETS": {
+    "original": "CONFIG_PKT_SOCKETS",
+    "target": "CONFIG_PACKET",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_TUN_TAP": {
+    "original": "CONFIG_TUN_TAP",
+    "target": "CONFIG_TUN",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_TUNNEL": {
+    "original": "CONFIG_TUNNEL",
+    "target": "CONFIG_TUN",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_TUN_DRIVER": {
+    "original": "CONFIG_TUN_DRIVER",
+    "target": "CONFIG_TUN",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_VIRTUAL_NET": {
+    "original": "CONFIG_VIRTUAL_NET",
+    "target": "CONFIG_TUN",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_BRIDGE": {
+    "original": "CONFIG_BRIDGE",
+    "target": "CONFIG_BRIDGE_NETFILTER",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_NET_BRIDGE": {
+    "original": "CONFIG_NET_BRIDGE",
+    "target": "CONFIG_BRIDGE_NETFILTER",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_ETHERNET_BRIDGE": {
+    "original": "CONFIG_ETHERNET_BRIDGE",
+    "target": "CONFIG_BRIDGE_NETFILTER",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_IPTABLES": {
+    "original": "CONFIG_IPTABLES",
+    "target": "CONFIG_IP_NF_IPTABLES",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_NETFILTER_IPTABLES": {
+    "original": "CONFIG_NETFILTER_IPTABLES",
+    "target": "CONFIG_IP_NF_IPTABLES",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_IP_TABLES": {
+    "original": "CONFIG_IP_TABLES",
+    "target": "CONFIG_IP_NF_IPTABLES",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_PROCFS": {
+    "original": "CONFIG_PROCFS",
+    "target": "CONFIG_PROC_FS",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_PROC_FILESYSTEM": {
+    "original": "CONFIG_PROC_FILESYSTEM",
+    "target": "CONFIG_PROC_FS",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_SYS_FS": {
+    "original": "CONFIG_SYS_FS",
+    "target": "CONFIG_SYSFS_DEPRECATED",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_DEVFS": {
+    "original": "CONFIG_DEVFS",
+    "target": "CONFIG_DEVTMPFS",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_DEV_FS": {
+    "original": "CONFIG_DEV_FS",
+    "target": "CONFIG_DEVTMPFS",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_DEVICE_FS": {
+    "original": "CONFIG_DEVICE_FS",
+    "target": "CONFIG_DEVTMPFS",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_TMPFS": {
+    "original": "CONFIG_TMPFS",
+    "target": "CONFIG_TMPFS_POSIX_ACL",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_TMP_FS": {
+    "original": "CONFIG_TMP_FS",
+    "target": "CONFIG_TMPFS_POSIX_ACL",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_HID": {
+    "original": "CONFIG_HID",
+    "target": "CONFIG_HID_GENERIC",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_INPUT_HID": {
+    "original": "CONFIG_INPUT_HID",
+    "target": "CONFIG_HID_GENERIC",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_MOUSE": {
+    "original": "CONFIG_MOUSE",
+    "target": "CONFIG_INPUT_MOUSE",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_INPUT_MICE": {
+    "original": "CONFIG_INPUT_MICE",
+    "target": "CONFIG_INPUT_MOUSE",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_USB_MOUSE": {
+    "original": "CONFIG_USB_MOUSE",
+    "target": "CONFIG_INPUT_MOUSE",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_KEYBOARD": {
+    "original": "CONFIG_KEYBOARD",
+    "target": "CONFIG_INPUT_KEYBOARD",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_INPUT_KBD": {
+    "original": "CONFIG_INPUT_KBD",
+    "target": "CONFIG_INPUT_KEYBOARD",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_USB_KEYBOARD": {
+    "original": "CONFIG_USB_KEYBOARD",
+    "target": "CONFIG_INPUT_KEYBOARD",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_CRYPTO_SHA": {
+    "original": "CONFIG_CRYPTO_SHA",
+    "target": "CONFIG_CRYPTO_SHA1",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_SHA1": {
+    "original": "CONFIG_SHA1",
+    "target": "CONFIG_CRYPTO_SHA1",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_HASH_SHA1": {
+    "original": "CONFIG_HASH_SHA1",
+    "target": "CONFIG_CRYPTO_SHA1",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_AES": {
+    "original": "CONFIG_AES",
+    "target": "CONFIG_CRYPTO_AES_GENERIC",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_AES_CIPHER": {
+    "original": "CONFIG_AES_CIPHER",
+    "target": "CONFIG_CRYPTO_AES_GENERIC",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_CRYPTO_MD5": {
+    "original": "CONFIG_CRYPTO_MD5",
+    "target": "CONFIG_CRYPTO_MD5_GENERIC",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_MD5": {
+    "original": "CONFIG_MD5",
+    "target": "CONFIG_CRYPTO_MD5_GENERIC",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_HASH_MD5": {
+    "original": "CONFIG_HASH_MD5",
+    "target": "CONFIG_CRYPTO_MD5_GENERIC",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_SELINUX": {
+    "original": "CONFIG_SELINUX",
+    "target": "CONFIG_SECURITY_SELINUX",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_SEC_SELINUX": {
+    "original": "CONFIG_SEC_SELINUX",
+    "target": "CONFIG_SECURITY_SELINUX",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_LSM_SELINUX": {
+    "original": "CONFIG_LSM_SELINUX",
+    "target": "CONFIG_SECURITY_SELINUX",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_APPARMOR": {
+    "original": "CONFIG_APPARMOR",
+    "target": "CONFIG_SECURITY_APPARMOR",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_SEC_APPARMOR": {
+    "original": "CONFIG_SEC_APPARMOR",
+    "target": "CONFIG_SECURITY_APPARMOR",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_LSM_APPARMOR": {
+    "original": "CONFIG_LSM_APPARMOR",
+    "target": "CONFIG_SECURITY_APPARMOR",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_CONTROL_GROUPS": {
+    "original": "CONFIG_CONTROL_GROUPS",
+    "target": "CONFIG_CGROUPS",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_CGRP": {
+    "original": "CONFIG_CGRP",
+    "target": "CONFIG_CGROUPS",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_NS": {
+    "original": "CONFIG_NS",
+    "target": "CONFIG_NAMESPACES",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_KERNEL_NS": {
+    "original": "CONFIG_KERNEL_NS",
+    "target": "CONFIG_NAMESPACES",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_USER_NS": {
+    "original": "CONFIG_USER_NS",
+    "target": "CONFIG_USER_NAMESPACES",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_USER_NAMESPACE": {
+    "original": "CONFIG_USER_NAMESPACE",
+    "target": "CONFIG_USER_NAMESPACES",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_NET_NS": {
+    "original": "CONFIG_NET_NS",
+    "target": "CONFIG_NET_NAMESPACES",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_NETWORK_NS": {
+    "original": "CONFIG_NETWORK_NS",
+    "target": "CONFIG_NET_NAMESPACES",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_NET_NAMESPACE": {
+    "original": "CONFIG_NET_NAMESPACE",
+    "target": "CONFIG_NET_NAMESPACES",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_PID_NS": {
+    "original": "CONFIG_PID_NS",
+    "target": "CONFIG_PID_NAMESPACES",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_PID_NAMESPACE": {
+    "original": "CONFIG_PID_NAMESPACE",
+    "target": "CONFIG_PID_NAMESPACES",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_HIGHMEM": {
+    "original": "CONFIG_HIGHMEM",
+    "target": "CONFIG_HIGHMEM64G",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_HIGH_MEM": {
+    "original": "CONFIG_HIGH_MEM",
+    "target": "CONFIG_HIGHMEM64G",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_64G_HIGHMEM": {
+    "original": "CONFIG_64G_HIGHMEM",
+    "target": "CONFIG_HIGHMEM64G",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_SMP": {
+    "original": "CONFIG_SMP",
+    "target": "CONFIG_SMP_SUPPORT",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_SYMMETRIC_MP": {
+    "original": "CONFIG_SYMMETRIC_MP",
+    "target": "CONFIG_SMP_SUPPORT",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_MULTI_PROCESSOR": {
+    "original": "CONFIG_MULTI_PROCESSOR",
+    "target": "CONFIG_SMP_SUPPORT",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_PREEMPT": {
+    "original": "CONFIG_PREEMPT",
+    "target": "CONFIG_PREEMPT_VOLUNTARY",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_PREEMPTION": {
+    "original": "CONFIG_PREEMPTION",
+    "target": "CONFIG_PREEMPT_VOLUNTARY",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_VOLUNTARY_PREEMPT": {
+    "original": "CONFIG_VOLUNTARY_PREEMPT",
+    "target": "CONFIG_PREEMPT_VOLUNTARY",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_NO_PREEMPT": {
+    "original": "CONFIG_NO_PREEMPT",
+    "target": "CONFIG_PREEMPT_NONE",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_PREEMPT_DISABLED": {
+    "original": "CONFIG_PREEMPT_DISABLED",
+    "target": "CONFIG_PREEMPT_NONE",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_RT_PREEMPT": {
+    "original": "CONFIG_RT_PREEMPT",
+    "target": "CONFIG_PREEMPT_RT",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_REALTIME": {
+    "original": "CONFIG_REALTIME",
+    "target": "CONFIG_PREEMPT_RT",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  },
+  "CONFIG_PREEMPT_REALTIME": {
+    "original": "CONFIG_PREEMPT_REALTIME",
+    "target": "CONFIG_PREEMPT_RT",
+    "confidence": 0.95,
+    "source": "manual",
+    "usage_count": 0,
+    "success_rate": 1.0,
+    "last_used": "",
+    "verified": true
+  }
+}

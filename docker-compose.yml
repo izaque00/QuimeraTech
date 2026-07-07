@@ -1,0 +1,84 @@
+# docker-compose.yml
+# Quimera Cluster — API + Workers + Redis
+#
+# Uso:
+#   1. Configure .env com suas chaves LLM
+#   2. docker-compose up -d
+#   3. docker-compose up -d --scale worker=4
+#
+# Acessos:
+#   API:       http://localhost:8000
+#   Dashboard: http://localhost:8000/dashboard
+#   Health:    http://localhost:8000/api/v1/health
+
+version: "3.9"
+
+services:
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 3
+    restart: unless-stopped
+
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.api
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    environment:
+      - REDIS_URL=redis://redis:6379
+      - DATABASE_URL=sqlite:///./data/quimera.db
+      - LOG_LEVEL=${LOG_LEVEL:-info}
+      - QUIMERA_ENV=${QUIMERA_ENV:-production}
+      - GROQ_API_KEY=${GROQ_API_KEY:-}
+      - OPENAI_API_KEY=${OPENAI_API_KEY:-}
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY:-}
+      - GOOGLE_API_KEY=${GOOGLE_API_KEY:-}
+      - GITHUB_TOKEN=${GITHUB_TOKEN:-}
+    volumes:
+      - quimera_data:/app/data
+    depends_on:
+      redis:
+        condition: service_healthy
+    command: python -m quimera.api.run all --redis redis://redis:6379 --workers 1
+    restart: unless-stopped
+
+  worker:
+    build:
+      context: .
+      dockerfile: Dockerfile.api
+    env_file:
+      - .env
+    environment:
+      - REDIS_URL=redis://redis:6379
+      - DATABASE_URL=sqlite:///./data/quimera.db
+      - LOG_LEVEL=${LOG_LEVEL:-info}
+      - QUIMERA_ENV=${QUIMERA_ENV:-production}
+      - GROQ_API_KEY=${GROQ_API_KEY:-}
+      - OPENAI_API_KEY=${OPENAI_API_KEY:-}
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY:-}
+      - GOOGLE_API_KEY=${GOOGLE_API_KEY:-}
+      - GITHUB_TOKEN=${GITHUB_TOKEN:-}
+    volumes:
+      - quimera_data:/app/data
+    depends_on:
+      redis:
+        condition: service_healthy
+    command: python -m quimera.api.run worker --redis redis://redis:6379 --workers 2
+    restart: unless-stopped
+    deploy:
+      replicas: 2
+
+volumes:
+  redis_data:
+  quimera_data:

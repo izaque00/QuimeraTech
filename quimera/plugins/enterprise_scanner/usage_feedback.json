@@ -1,0 +1,35 @@
+{
+  "successful_resolutions": [
+    {
+      "original": "CONFIG_SYS_IPC",
+      "target": "CONFIG_SYSVIPC",
+      "confidence": 0.9,
+      "timestamp": "2024-01-01T12:00:00Z"
+    },
+    {
+      "original": "CONFIG_NET_FILT",
+      "target": "CONFIG_NETFILTER",
+      "confidence": 0.9,
+      "timestamp": "2024-01-01T12:00:00Z"
+    },
+    {
+      "original": "CONFIG_USB_STOR",
+      "target": "CONFIG_USB_STORAGE",
+      "confidence": 0.9,
+      "timestamp": "2024-01-01T12:00:00Z"
+    },
+    {
+      "original": "CONFIG_SND_CORE",
+      "target": "CONFIG_SOUND_CORE",
+      "confidence": 0.9,
+      "timestamp": "2024-01-01T12:00:00Z"
+    },
+    {
+      "original": "CONFIG_GFX_I915",
+      "target": "CONFIG_DRM_I915",
+      "confidence": 0.9,
+      "timestamp": "2024-01-01T12:00:00Z"
+    }
+  ],
+  "failed_resolutions": []
+}

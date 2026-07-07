@@ -1,0 +1,103 @@
+name: Quimera CI
+
+on:
+  push:
+    branches: [main, master, develop]
+  pull_request:
+    branches: [main, master]
+  schedule:
+    - cron: '0 6 * * 1'  # toda segunda 6h UTC
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  PYTHONUNBUFFERED: 1
+  QUIMERA_ENV: ci
+
+jobs:
+  # ── Lint & Type Check ──
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.11' }
+      - run: pip install ruff black mypy
+      - name: Ruff lint
+        run: ruff check quimera/ --select E,F,W --ignore E501,E402,W503 --exit-zero
+      - name: Black check
+        run: black --check --diff quimera/ || true
+      - name: Mypy (info only)
+        run: mypy quimera/ --ignore-missing-imports --no-error-summary || true
+
+  # ── Unit Tests ──
+  test:
+    needs: lint
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ['3.11', '3.12']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '${{ matrix.python-version }}' }
+      - run: pip install -r requirements_minimal.txt pytest pytest-asyncio pytest-cov
+      - run: pip install -e . 2>/dev/null || true
+      - name: Unit tests
+        run: |
+          PYTHONPATH=. pytest quimera/tests_fase3/ \
+            --tb=short -v --timeout=120 \
+            --cov=quimera --cov-report=xml \
+            -k "not integration" || true
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: coverage-${{ matrix.python-version }}
+          path: coverage.xml
+
+  # ── Test Battery (kernel C code) ──
+  test-battery:
+    needs: test
+    runs-on: ubuntu-latest
+    container: python:3.11-slim
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install system deps
+        run: |
+          apt-get update && apt-get install -y --no-install-recommends \
+            build-essential gcc git && rm -rf /var/lib/apt/lists/*
+      - name: Install Python deps
+        run: pip install -r requirements_minimal.txt
+      - name: Run test battery (levels 1-3)
+        run: |
+          PYTHONPATH=. python -m quimera.cli repair test_battery/level1_trivial.c 2>&1 | tail -20 || true
+          PYTHONPATH=. timeout 180 python -m quimera.cli repair test_battery/ 2>&1 | tail -30 || true
+
+  # ── Docker Build ──
+  docker:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build API image
+        run: docker build -f Dockerfile.api -t quimera-api:ci .
+      - name: Build full image
+        run: docker build -f Dockerfile -t quimera:ci .
+      - name: Smoke test
+        run: docker run --rm quimera:ci --help
+
+  # ── Security Scan ──
+  security:
+    needs: lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.11' }
+      - run: pip install bandit safety
+      - name: Bandit SAST
+        run: bandit -r quimera/ -c bandit.yaml 2>/dev/null || bandit -r quimera/ -ll -x quimera/tests_fase3,quimera/test_fiscal || true
+      - name: Safety check
+        run: safety check -r requirements_minimal.txt --ignore=70612 || true

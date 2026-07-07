@@ -1,0 +1,3 @@
+# Bandit configuration for Quimera
+skips: ['B101', 'B104', 'B301', 'B403', 'B404', 'B603', 'B607']
+exclude_dirs: ['quimera/tests_fase3', 'quimera/test_fiscal', 'quimera/tests']

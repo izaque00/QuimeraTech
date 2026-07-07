@@ -1,0 +1,32 @@
+# Arquivos ignorados pelo git
+# ⚠️ NUNCA commitar estes arquivos
+
+# Chaves e segredos
+.env
+.vault
+*.pem
+*.key
+credentials.json
+service-account.json
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+*.egg-info/
+dist/
+build/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Quimera
+logs/
+*.db
+*.sqlite
+quimera_build/

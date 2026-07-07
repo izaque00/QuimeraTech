@@ -1,0 +1,292 @@
+{
+  "vulnerabilities": {
+    "VULN-001": {
+      "vuln_id": "VULN-001",
+      "name": "SQL Injection",
+      "category": "Injection",
+      "severity": "critical",
+      "languages": [
+        "python",
+        "javascript",
+        "java",
+        "php",
+        "go",
+        "rust"
+      ],
+      "frameworks": [
+        "SQLAlchemy",
+        "Django ORM",
+        "Sequelize",
+        "JDBC"
+      ],
+      "detection_pattern": "(execute|query)\\s*\\(\\s*[\"\\'].*\\{.*\\}",
+      "fix_pattern": "Use parameterized queries with ? or %s placeholders",
+      "description": "User input concatenated directly into SQL queries",
+      "cwe_id": "CWE-89",
+      "owasp_id": "A03:2021",
+      "times_detected": 0,
+      "times_fixed": 0,
+      "success_rate": 0.0,
+      "known_cases": [],
+      "projects": []
+    },
+    "VULN-002": {
+      "vuln_id": "VULN-002",
+      "name": "Hardcoded Secrets",
+      "category": "Cryptographic Failures",
+      "severity": "critical",
+      "languages": [
+        "*"
+      ],
+      "frameworks": [
+        "*"
+      ],
+      "detection_pattern": "(SECRET|API_KEY|PASSWORD|TOKEN)\\s*=\\s*[\"\\'][A-Za-z0-9]",
+      "fix_pattern": "Use environment variables or secrets manager",
+      "description": "Secrets hardcoded in source code",
+      "cwe_id": "CWE-798",
+      "owasp_id": "A02:2021",
+      "times_detected": 0,
+      "times_fixed": 0,
+      "success_rate": 0.0,
+      "known_cases": [],
+      "projects": []
+    },
+    "VULN-003": {
+      "vuln_id": "VULN-003",
+      "name": "Command Injection",
+      "category": "Injection",
+      "severity": "critical",
+      "languages": [
+        "python",
+        "javascript",
+        "java",
+        "php",
+        "ruby"
+      ],
+      "frameworks": [
+        "*"
+      ],
+      "detection_pattern": "(os\\.system|subprocess\\.|exec\\(|eval\\(|shell_exec)",
+      "fix_pattern": "Use subprocess.run with args list and shell=False",
+      "description": "User input passed to system command execution",
+      "cwe_id": "CWE-78",
+      "owasp_id": "A03:2021",
+      "times_detected": 0,
+      "times_fixed": 0,
+      "success_rate": 0.0,
+      "known_cases": [],
+      "projects": []
+    },
+    "VULN-004": {
+      "vuln_id": "VULN-004",
+      "name": "Path Traversal",
+      "category": "Broken Access Control",
+      "severity": "high",
+      "languages": [
+        "python",
+        "javascript",
+        "java",
+        "php"
+      ],
+      "frameworks": [
+        "Flask",
+        "Express",
+        "Spring"
+      ],
+      "detection_pattern": "(open|read|send_file)\\s*\\(\\s*.*\\+.*request",
+      "fix_pattern": "Use os.path.basename() or path sanitization",
+      "description": "User input used to construct file paths without sanitization",
+      "cwe_id": "CWE-22",
+      "owasp_id": "A01:2021",
+      "times_detected": 0,
+      "times_fixed": 0,
+      "success_rate": 0.0,
+      "known_cases": [],
+      "projects": []
+    },
+    "VULN-005": {
+      "vuln_id": "VULN-005",
+      "name": "XSS (Cross-Site Scripting)",
+      "category": "Injection",
+      "severity": "high",
+      "languages": [
+        "javascript",
+        "typescript",
+        "python",
+        "java",
+        "php"
+      ],
+      "frameworks": [
+        "React",
+        "Vue",
+        "Django",
+        "Flask",
+        "Express"
+      ],
+      "detection_pattern": "(innerHTML|dangerouslySetInnerHTML|Markup\\()",
+      "fix_pattern": "Use auto-escaping template engines. Sanitize user input.",
+      "description": "User input rendered without escaping",
+      "cwe_id": "CWE-79",
+      "owasp_id": "A03:2021",
+      "times_detected": 0,
+      "times_fixed": 0,
+      "success_rate": 0.0,
+      "known_cases": [],
+      "projects": []
+    },
+    "VULN-006": {
+      "vuln_id": "VULN-006",
+      "name": "Insecure Deserialization",
+      "category": "Insecure Design",
+      "severity": "high",
+      "languages": [
+        "python",
+        "java",
+        "javascript",
+        "php"
+      ],
+      "frameworks": [
+        "*"
+      ],
+      "detection_pattern": "(pickle\\.load|yaml\\.load\\(|ObjectInputStream|unserialize)",
+      "fix_pattern": "Use safe loaders: yaml.safe_load(), never pickle.load() on user data",
+      "description": "User-controlled data deserialized without validation",
+      "cwe_id": "CWE-502",
+      "owasp_id": "A08:2021",
+      "times_detected": 0,
+      "times_fixed": 0,
+      "success_rate": 0.0,
+      "known_cases": [],
+      "projects": []
+    },
+    "VULN-007": {
+      "vuln_id": "VULN-007",
+      "name": "SSRF",
+      "category": "Security Misconfiguration",
+      "severity": "high",
+      "languages": [
+        "python",
+        "javascript",
+        "java",
+        "go"
+      ],
+      "frameworks": [
+        "*"
+      ],
+      "detection_pattern": "(requests\\.get|fetch|http\\.get|urlopen)\\s*\\(\\s*.*request\\.",
+      "fix_pattern": "Whitelist allowed URLs. Never pass user input directly to HTTP clients.",
+      "description": "User-controlled URL fetched by server",
+      "cwe_id": "CWE-918",
+      "owasp_id": "A10:2021",
+      "times_detected": 0,
+      "times_fixed": 0,
+      "success_rate": 0.0,
+      "known_cases": [],
+      "projects": []
+    },
+    "VULN-008": {
+      "vuln_id": "VULN-008",
+      "name": "SSTI (Server-Side Template Injection)",
+      "category": "Injection",
+      "severity": "critical",
+      "languages": [
+        "python",
+        "javascript",
+        "java"
+      ],
+      "frameworks": [
+        "Jinja2",
+        "Django Templates",
+        "EJS",
+        "Thymeleaf"
+      ],
+      "detection_pattern": "(jinja2\\.Template|render_template_string)\\s*\\(",
+      "fix_pattern": "Never concatenate user input into template strings. Use template variables.",
+      "description": "User input embedded directly in template engine",
+      "cwe_id": "CWE-94",
+      "owasp_id": "A03:2021",
+      "times_detected": 0,
+      "times_fixed": 0,
+      "success_rate": 0.0,
+      "known_cases": [],
+      "projects": []
+    },
+    "VULN-009": {
+      "vuln_id": "VULN-009",
+      "name": "Mass Assignment",
+      "category": "Broken Access Control",
+      "severity": "high",
+      "languages": [
+        "python",
+        "javascript",
+        "java",
+        "ruby"
+      ],
+      "frameworks": [
+        "Django",
+        "Flask",
+        "Express",
+        "Rails",
+        "Spring"
+      ],
+      "detection_pattern": "\\*\\*\\w+,\\s*\\*\\*|Object\\.assign\\(.*req\\.body",
+      "fix_pattern": "Explicitly whitelist updatable fields. Never use spread on request body.",
+      "description": "All request body fields assigned to model without filtering",
+      "cwe_id": "CWE-915",
+      "owasp_id": "A01:2021",
+      "times_detected": 0,
+      "times_fixed": 0,
+      "success_rate": 0.0,
+      "known_cases": [],
+      "projects": []
+    },
+    "VULN-010": {
+      "vuln_id": "VULN-010",
+      "name": "Buffer Overflow",
+      "category": "Memory Safety",
+      "severity": "critical",
+      "languages": [
+        "c",
+        "cpp",
+        "rust(unsafe)"
+      ],
+      "frameworks": [
+        "*"
+      ],
+      "detection_pattern": "(strcpy|strcat|sprintf|gets|scanf)\\s*\\(",
+      "fix_pattern": "Use strncpy, snprintf, or safe alternatives. Check buffer bounds.",
+      "description": "Unchecked buffer operations leading to memory corruption",
+      "cwe_id": "CWE-120",
+      "owasp_id": "N/A",
+      "times_detected": 54,
+      "times_fixed": 0,
+      "success_rate": 0.0,
+      "known_cases": [],
+      "projects": [
+        "/tmp/cg_demo/main.c",
+        "test.c",
+        "/tmp/cg_real/main.c",
+        "/tmp/quimera_exploit_test/main.c",
+        "/tmp/quimera_llm_test/main.c",
+        "/tmp/qh/main.c",
+        "/tmp/qh3/main.c",
+        "/tmp/qh4/main.c",
+        "/tmp/qor/main.c",
+        "/tmp/qint_w3hy1ocu/main.c",
+        "/tmp/qfinal_06qn5r9a/main.c",
+        "/tmp/qnl_88_lxv7h/main.c",
+        "/tmp/qb_CWE-416-UAF_oy0re_kf/main.c",
+        "/tmp/qb_CWE-120-BOF_e_8zbdus/main.c",
+        "/tmp/qb_MULTI-CWE_w73t5nrt/main.c",
+        "/tmp/tmp4ap3ilu2.c",
+        "/tmp/qb_CWE-416-UAF_84mm4_w5/main.c",
+        "/tmp/qorch_maka0v1y/main.c",
+        "test_battery/level4_hard.c"
+      ]
+    }
+  },
+  "strategies": {},
+  "projects": {},
+  "updated_at": "2026-07-02T13:56:53.966092+00:00"
+}

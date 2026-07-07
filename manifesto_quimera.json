@@ -1,0 +1,124 @@
+{
+  "nome": "Sistema Quimera",
+  "versao": "3.0.0",
+  "motor_principal": "quimera/orquestrador_aprimorado.py",
+  "modulos": {
+    "core": [
+      "quimera/quadro_negro.py",
+      "quimera/core/vector_manager.py",
+      "quimera/core/knowledge_base.py",
+      "quimera/core/advanced_rag.py",
+      "quimera/core/ast_plus_safe_vetor.py",
+      "quimera/core/ast_utils.py",
+      "quimera/core/embeddings.py",
+      "quimera/core/kan_engine.py",
+      "quimera/core/llm_kernel.py",
+      "quimera/core/local_model_manager.py",
+      "quimera/core/model_router.py",
+      "quimera/core/plugin_framework.py",
+      "quimera/core/orquestrador_unificado.py"
+    ],
+    "agentes": [
+      "quimera/agentes/roteador_modelos.py",
+      "quimera/agentes/agente_analista.py",
+      "quimera/agentes/agente_critico.py",
+      "quimera/agentes/agente_sintetizador.py",
+      "quimera/agentes/agente_mestra.py",
+      "quimera/agentes/agente_gerador.py",
+      "quimera/agentes/agente_gestao_rollback.py",
+      "quimera/agentes/agente_configurador.py",
+      "quimera/agentes/agente_autocorrecao.py",
+      "quimera/agentes/refinador_v3/agente_refinador.py",
+      "quimera/agentes/refinador_v3/bandit_controller.py",
+      "quimera/agentes/refinador_v3/config_refinador.py",
+      "quimera/agentes/refinador_v3/heuristicas_mutacao.py",
+      "quimera/agentes/refinador_v3/memoria_iterativa.py",
+      "quimera/agentes/refinador_v3/prompt_generator.py",
+      "quimera/agentes/refinador_v3/validador_ast.py",
+      "quimera/agentes/refinador_v3/votador_consenso.py",
+      "quimera/agentes/agente_base.py",
+      "quimera/agentes/agente_estrategista.py",
+      "quimera/agentes/agente_fiscal_codigo.py",
+      "quimera/agentes/agente_historico.py",
+      "quimera/agentes/agente_kan.py",
+      "quimera/agentes/agente_quantico.py",
+      "quimera/agentes/agente_transformador.py",
+      "quimera/agentes/agente_votoaste.py"
+    ],
+    "bibliotecario": [
+      "quimera/bibliotecario/cognitive_librarian_ultra_advanced.py",
+      "quimera/bibliotecario/biblioteca_alexandria.py",
+      "quimera/bibliotecario/multi_llm_orchestrator.py",
+      "quimera/bibliotecario/scanner_avancado.py"
+    ],
+    "ferramentas": [
+      "quimera/ferramentas/device_scanner.py",
+      "quimera/ferramentas/scanner_avancado.py",
+      "quimera/seguranca/vulnerability_detection_engine.py",
+      "quimera/testes_automatizados/ai_test_generation_engine.py",
+      "quimera/analise_codigo/code_quality_analyzer.py",
+      "quimera/documentacao/documentation_generator.py",
+      "quimera/refatoracao/intelligent_refactoring_engine.py",
+      "quimera/performance/performance_profiling_engine.py"
+    ],
+    "plugins_seguranca": [
+      "quimera/plugins/enterprise_scanner/advanced_kconfig_parser.py",
+      "quimera/plugins/enterprise_scanner/enterprise_kernel_scanner.py",
+      "quimera/plugins/enterprise_scanner/knowledge_expansion_system.py",
+      "quimera/plugins/enterprise_scanner/knowledge_trainer.py",
+      "quimera/plugins/enterprise_scanner/production_kernel_scanner.py",
+      "quimera/plugins/enterprise_scanner/quimera_plugin_interface.py",
+      "quimera/plugins/enterprise_scanner/blacklisted_variations.json",
+      "quimera/plugins/enterprise_scanner/final_knowledge_backup.json",
+      "quimera/plugins/enterprise_scanner/kconfig_grammar.lark",
+      "quimera/plugins/enterprise_scanner/kernel_knowledge_export.json",
+      "quimera/plugins/enterprise_scanner/kernel_profiles.json",
+      "quimera/plugins/enterprise_scanner/kernel_profiles_expanded.json",
+      "quimera/plugins/enterprise_scanner/learned_patterns.json",
+      "quimera/plugins/enterprise_scanner/module_variations.json",
+      "quimera/plugins/enterprise_scanner/real_world_variations.json",
+      "quimera/plugins/enterprise_scanner/usage_feedback.json"
+    ],
+    "backends_seguranca": [
+      "quimera/integration_backends/angr_wrapper.py",
+      "quimera/integration_backends/clarabel_wrapper.py",
+      "quimera/integration_backends/hypermapper_wrapper.py",
+      "quimera/integration_backends/llm_debugger.py",
+      "quimera/integration_backends/multi_llm_orchestrator.py",
+      "quimera/integration_backends/openllm_local.py",
+      "quimera/integration_backends/redqueen_fuzzer.py",
+      "quimera/integration_backends/z3_wrapper.py"
+    ],
+    "db": [
+      "quimera/db/base.py",
+      "quimera/db/service.py",
+      "quimera/db/models.py",
+      "quimera/db/schemas.py",
+      "quimera/db/utils.py"
+    ],
+    "kernel": [
+      "quimera/kernel/gestor.py"
+    ],
+    "utils": [
+      "quimera/utils/general.py",
+      "quimera/utils/kernel_utils.py",
+      "quimera/utils/patch_utils_refactor.py",
+      "quimera/utils/refactor_utils.py",
+      "quimera/utils/linter.py",
+      "quimera/utils/patch_utils.py"
+    ],
+    "logs": [
+      "quimera/logs/parser.py"
+    ],
+    "mab": [
+      "quimera/mab/mab.py"
+    ],
+    "plugins": [
+      "quimera/plugins/plugin_manager.py",
+      "quimera/plugins/base_plugin.py"
+    ]
+  },
+  "configuracoes": {
+    "quimera_config": "quimera/config.py"
+  }
+}
